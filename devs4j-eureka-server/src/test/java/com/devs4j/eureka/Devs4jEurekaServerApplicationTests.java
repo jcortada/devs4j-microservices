@@ -1,10 +1,10 @@
-package com.devs4j.dragonball;
+package com.devs4j.eureka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Devs4jDragonBallLiveApplicationTests {
+class Devs4jEurekaServerApplicationTests {
 
 	@Test
 	void contextLoads() {

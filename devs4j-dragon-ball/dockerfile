@@ -1,0 +1,15 @@
+
+#imagen base
+FROM openjdk:11-slim
+
+#informacion de contacto
+LABEL mantainer="jcortada@minsait.com"
+
+#archivo jar
+ARG JAR_FILE
+
+#agregar el jar al contenedor
+COPY ${JAR_FILE} /app.jar
+
+#ejecucion de la aplicacion
+ENTRYPOINT ["java","-jar","/app.ja"]
