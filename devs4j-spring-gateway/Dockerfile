@@ -2,7 +2,7 @@
 FROM openjdk:11-slim                                       
 
 # Add Maintainer Info
-LABEL maintainer="Alex <contacto@devs4j.com>"
+LABEL maintainer="xavier cortada <xcortada@gmail.com>"
 
 # The application's jar file
 ARG JAR_FILE    
