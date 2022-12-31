@@ -1,5 +1,7 @@
 package com.devs4j.gateway.config;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
@@ -11,6 +13,10 @@ import org.springframework.context.annotation.Profile;
 public class Devs4jGatewayConfig {
 	@Autowired
 	private Devs4jAuthFilter authFilter;
+	
+	
+	private static final Logger log = LoggerFactory.getLogger(Devs4jGatewayConfig.class);
+
 	
 	@Bean
 	@Profile("localhostRouter-noEureka")
@@ -29,6 +35,9 @@ public class Devs4jGatewayConfig {
 	@Bean
 	@Profile("localhost-eureka-cb")
 	public RouteLocator configLocalEurekaCb(RouteLocatorBuilder builder) {
+		
+		log.info(builder.toString());
+		
 		return builder.routes()
 					.route(r -> r.path("/api/v1/dragonball/*")
 							.filters(f -> {
