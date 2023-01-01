@@ -36,7 +36,7 @@ public class Devs4jGatewayConfig {
 	@Profile("localhost-eureka-cb")
 	public RouteLocator configLocalEurekaCb(RouteLocatorBuilder builder) {
 		
-		log.info(builder.toString());
+		log.info("my debug: " + builder.toString());
 		
 		return builder.routes()
 					.route(r -> r.path("/api/v1/dragonball/*")
