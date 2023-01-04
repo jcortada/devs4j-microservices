@@ -23,7 +23,7 @@ public class Devs4jCloudstreamExampleApplication {
 	/*
 	 * producer-out-0
 	 */
-	@Bean
+	//@Bean
 	public Supplier<Flux<Long>> producer() {
 		return () -> Flux.interval(Duration.ofSeconds(1)).log();
 	}
@@ -32,7 +32,7 @@ public class Devs4jCloudstreamExampleApplication {
 	 * processor-in-0
 	 * processor-out-0
 	 */
-	@Bean
+	//@Bean
 	public Function<Flux<Long>, Flux<Long>> processor() {
 		return flx -> flx.map(nmbr -> nmbr * nmbr);
 	}
@@ -40,7 +40,7 @@ public class Devs4jCloudstreamExampleApplication {
 	/*
 	 * consumer-in-0
 	 */
-	@Bean
+	//@Bean
 	public Consumer<Long> consumer() {
 		return (number) -> {
 			log.info("message received {}", number);
