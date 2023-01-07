@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: devs4j-auth
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+server:
+  port: 8085
+jwt:
+  secret: devs4j-secret
+eureka:
+  instance:
+    prefer-ip-address: true
+        

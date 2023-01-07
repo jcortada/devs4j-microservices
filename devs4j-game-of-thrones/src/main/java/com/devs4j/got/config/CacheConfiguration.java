@@ -13,8 +13,8 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@EnableCaching
-@Configuration
+//@EnableCaching
+//@Configuration
 public class CacheConfiguration {
 
 	@Bean(destroyMethod = "shutdown")
